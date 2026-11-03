@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 250 247 242;
+  --card: 255 255 255;
+  --ink: 27 25 22;
+  --muted: 111 103 90;
+  --line: 231 224 211;
+  --accent: 146 106 45;
+  --accent-ink: 255 255 255;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: 14 13 11;
+  --card: 23 21 18;
+  --ink: 236 229 216;
+  --muted: 152 144 127;
+  --line: 42 38 31;
+  --accent: 214 176 110;
+  --accent-ink: 23 19 10;
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--ink));
+}
+
+::selection {
+  background: rgb(var(--accent) / 0.3);
+}
+
+@layer components {
+  .btn-icon {
+    @apply inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg transition hover:bg-black/5 dark:hover:bg-white/10;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-line px-3 py-1.5 text-sm transition;
+  }
+
+  .chip-on {
+    @apply border-transparent bg-accent text-onaccent;
+  }
+
+  .sheet {
+    @apply rounded-2xl border border-line bg-card;
+  }
+
+  .hl {
+    border-radius: 0.375rem;
+    background: rgb(var(--accent) / 0.18);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+}
+
+/* barra de rolagem discreta */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--line)) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgb(var(--line));
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}

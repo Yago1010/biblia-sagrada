@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.expo/
+dist/
+build/
+*.log
+.env
+.env.local
+.DS_Store
+server/data/*.json
+!server/data/README.md

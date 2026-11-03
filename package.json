@@ -1,0 +1,30 @@
+{
+  "name": "biblia-sagrada",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "App web + mobile de BÃ­blia Sagrada (Next.js + Expo + Node), sem login, NVI e outras traduÃ§Ãµes, PT/EN, modo claro/escuro.",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "server"
+  ],
+  "scripts": {
+    "server": "npm run dev -w @biblia/server",
+    "web": "npm run dev -w web",
+    "mobile": "npm run start -w mobile",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "sync": "tsx scripts/sync-bibles.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "overrides": {
+    "expo-font": "14.0.12",
+    "react-native": "0.81.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

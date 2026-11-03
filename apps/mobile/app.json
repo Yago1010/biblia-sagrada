@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Bíblia Sagrada",
+    "slug": "biblia-sagrada",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "biblia",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.biblia.sagrada"
+    },
+    "android": {
+      "package": "com.biblia.sagrada",
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
